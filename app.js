@@ -1,17 +1,21 @@
 const express = require('express')
 const { mongoConection } = require('./DataBases/config')
 const dotenv = require('dotenv').config()
-
-
-mongoConection()
+const cors = require('cors')
 const app = express()
+mongoConection()
 
-
-app.get('/hola', (req, res) => {
-    return res.json({
-        msj: 'Hola'
+app.use(
+    cors({
+        origin: '*'
     })
-})
+)
+app.use(express.json())
+app.use(express.urlencoded({ extended: false}))
+
+const generos = require('./rutas/generoRouter')
+
+app.use('/api/v1/generos', generos)
 
 
 app.get("*", (req, res) => {
