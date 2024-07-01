@@ -5,13 +5,15 @@ const TipoProyectoSchema = Schema({
         type: String,
         required: [true, 'Nombre es requerido'],
         enum: ['ensayo', 'artículo', 'monografía', 'trabajo final de pregrado', 'trabajo final de especialización'],
+        unique: [true]
     },
     fechaCreacion: {
         type: Date,
         default: Date.now()
     },
     fechaActualizacion: {
-        type: Date
+        type: Date,
+        default: new Date()
     }
 });
 
