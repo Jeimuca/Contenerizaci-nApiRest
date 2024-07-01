@@ -11,21 +11,21 @@ app.use(
     })
 );
 app.use(express.json());
-app.use(express.urlencoded({ extended: false}));
+app.use(express.urlencoded({ extended: false }));
 
 // Importar rutas
-const generos = require('./rutas/generoRouter');
-const tipos = require('./rutas/tipoRouter');
-const medias = require('./rutas/mediaRouter'); 
-const directores = require('./rutas/directorRouter');
-const productoras = require('./rutas/productoraRouter');
+const etapas = require('./rutas/etapaRouter');
+const universidades = require('./rutas/universidadRouter');
+const proyectos = require('./rutas/proyectoRouter'); 
+const clientes = require('./rutas/clienteRouter');
+const tiposProyecto = require('./rutas/tipoProyectoRouter');
 
 // Usar las rutas
-app.use('/api/v1/generos', generos);
-app.use('/api/v1/tipos', tipos);
-app.use('/api/v1/medias', medias); 
-app.use('/api/v1/directores', directores);
-app.use('/api/v1/productoras', productoras);
+app.use('/api/v1/etapas', etapas);
+app.use('/api/v1/universidades', universidades);
+app.use('/api/v1/proyectos', proyectos); 
+app.use('/api/v1/clientes', clientes);
+app.use('/api/v1/tipos-proyecto', tiposProyecto);
 
 // Ruta para manejar errores 404
 app.get("*", (req, res) => {

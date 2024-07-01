@@ -1,14 +1,14 @@
 {
   "name": "proyecto_api",
   "version": "1.0.0",
-  "description": "API REST PELICULAS IUDIGITAL",
+  "description": "Contenerización API REST",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "app",
-    "peliculas",
+    "Contenerización",
     "IUDigital"
   ],
   "author": "jeison castañeda",
