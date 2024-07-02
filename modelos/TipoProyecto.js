@@ -20,4 +20,4 @@ const TipoProyectoSchema = Schema({
 module.exports = model('TipoProyecto', TipoProyectoSchema);
 
 
-module.exports = model('TipoProyecto', TipoProyectoSchema);
+

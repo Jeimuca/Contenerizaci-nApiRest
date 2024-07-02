@@ -14,7 +14,8 @@ const ClienteSchema = Schema({
         default: Date.now()
     },
     fechaActualizacion: {
-        type: Date
+        type: Date,
+        default: null 
     }
 });
 

@@ -1,5 +1,4 @@
 
-
 const TipoProyecto = require('../modelos/TipoProyecto');
 const { request, response } = require('express');
 

@@ -30,9 +30,14 @@ const editarCliente = async (req = request, res = response) => {
         const id = req.params.id;
         const { nombre, email } = req.body;
         const clienteActualizado = await Cliente.findByIdAndUpdate(id, { nombre, email }, { new: true });
+
         if (!clienteActualizado) {
             return res.status(404).json({ message: 'Cliente no encontrado' });
         }
+
+        clienteActualizado.fechaActualizacion = new Date();
+        await clienteActualizado.save();
+
         return res.status(200).json(clienteActualizado);
     } catch (error) {
         return res.status(500).json({ message: error.message });

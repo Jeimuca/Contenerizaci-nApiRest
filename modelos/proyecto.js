@@ -4,11 +4,12 @@ const ProyectoSchema = Schema({
     numero: {
         type: Number,
         required: [true, 'Número es requerido'],
-        unique: true
+        unique: [true]
     },
     titulo: {
         type: String,
-        required: [true, 'Título es requerido']
+        required: [true, 'Título es requerido'],
+        unique: [true]
     },
     fechaInicio: {
         type: Date,
