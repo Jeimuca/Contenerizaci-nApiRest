@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  proyectos-monolitica:
+    container_name: proyectos-monolitica
+    image: proyectos-monolitica:v1
+    build: 
+      context: .
+    ports: 
+      - "4000:4000"  
+    networks: 
+      - proyectos-app  
+
+networks: 
+  proyectos-app:
